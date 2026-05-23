@@ -25,7 +25,7 @@ def main():
     )
     parser.add_argument(
         "--data_path", type=str,
-        default="data/hb_llama3_8b.jsonl",
+        default="../data/hb_llama3_8b.jsonl",
     )
     parser.add_argument(
         "--target_layer", type=int, default=11,
@@ -48,7 +48,7 @@ def main():
         choices=["float16", "bfloat16", "float32"],
     )
     parser.add_argument(
-        "--output_json", type=str, default=f"results/defense_results.json", # CHANGE THIS ON CLI FOR QWEN
+        "--output_json", type=str, default=f"../results/defense_results.json", # CHANGE THIS ON CLI FOR QWEN
     )
     parser.add_argument(
         "--xstest", action="store_true",
@@ -59,10 +59,10 @@ def main():
         help="Run the defense on ORBench-Hard benchmark ",
     )
     parser.add_argument(
-        "--xstest_json", type=str, default="data/xstest_prompts.jsonl",
+        "--xstest_json", type=str, default="../data/xstest_prompts.jsonl",
     )
     parser.add_argument(
-        "--orbench_json", type=str, default="data/orbench_hard_prompts.jsonl",
+        "--orbench_json", type=str, default="../data/orbench_hard_prompts.jsonl",
     )
     parser.add_argument(
         "--defense", type=str, default="VANILLA",

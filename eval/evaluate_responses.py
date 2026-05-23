@@ -73,7 +73,7 @@ def main():
 
 
     FILENAME = args.filename
-    INPUT_FILE = f"data/{FILENAME}.jsonl"
+    INPUT_FILE = f"../data/{FILENAME}.jsonl"
     OUTPUT_FILE = f"EVALUATED_{FILENAME}.json"
     
     output_path = Path(OUTPUT_FILE)
