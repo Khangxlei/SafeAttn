@@ -322,7 +322,7 @@ def parse_args():
         choices=["float16", "bfloat16", "float32"],
     )
     p.add_argument(
-        "--output_dir", type=str, default="results",
+        "--output_dir", type=str, default="../results",
         help="Directory for the resulting PNG and JSON.",
     )
     p.add_argument(
