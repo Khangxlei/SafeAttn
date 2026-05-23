@@ -48,7 +48,7 @@ python precompute/run_pipeline.py \
 - `-batch_size`: Batch size. Default: `8`.
 
 ### Run Defensive Models
-Below is a basic CLI argument to generate prompts **SafeAttn** given a `.jsonl`
+Below is a basic CLI argument to generate prompts **SafeAttn** given a `.jsonl` file
 ```bash
 python src/main.py \
   --model_name meta-llama/Meta-Llama-3-8B-Instruct \
@@ -69,9 +69,17 @@ python src/main.py \
 - `--harm_vector_path`: Directory path to harmful directional vector.
 
 ## Dataset
-The datasets are not included in this repository to prevent the reproduction of dangerous content and adversarial jailbreaks. All datasets were obtained through open-source repositories.
+The datasets are not included in this repository to prevent the reproduction of dangerous content and adversarial jailbreaks. All datasets were obtained through open-source repositories. Here
+are the links to the datasets we obtained:
 
-- MUSE-A: 
+- MUSE-A: https://github.com/yansiyu02/MUSE
+- Crescendo and ActorAttack: https://github.com/AIM-Intelligence/Automated-Multi-Turn-Jailbreaks
+- SafeDialBench: https://github.com/drivetosouth/SafeDialBench-Dataset/tree/main/data/complete
+- XSTest: https://huggingface.co/datasets/walledai/XSTest
+- ORBench-Hard: https://huggingface.co/datasets/bench-llm/or-bench/viewer/or-bench-hard-1k
+
+## License
+This repository is intended strictly for research purposes and should not be used for any unethical or harmful activities.
 
 
 
