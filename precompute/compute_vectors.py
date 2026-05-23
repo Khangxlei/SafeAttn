@@ -16,12 +16,12 @@ def main():
     parser.add_argument(
         "--activations_dir",
         type=str,
-        default="activations",
+        default="../activations",
     )
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="vectors",
+        default="../vectors",
     )
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)

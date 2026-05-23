@@ -63,7 +63,7 @@ def main():
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="activations"
+        default="../activations"
     )
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--max_length", type=int, default=512)

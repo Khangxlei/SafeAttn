@@ -7,10 +7,10 @@ import torch
 def main():
     parser = argparse.ArgumentParser(description="Offline pipeline for harmful directional vector construction")
     parser.add_argument("--model_name",type=str,default="meta-llama/Meta-Llama-3-8B-Instruct")
-    parser.add_argument("--data_dir", type=str, default="data")
-    parser.add_argument("--activations_dir", type=str, default="activations")
-    parser.add_argument("--vectors_dir", type=str, default="vectors")
-    parser.add_argument("--results_dir", type=str, default="results")
+    parser.add_argument("--data_dir", type=str, default="../data")
+    parser.add_argument("--activations_dir", type=str, default="../activations")
+    parser.add_argument("--vectors_dir", type=str, default="../vectors")
+    parser.add_argument("--results_dir", type=str, default="../results")
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--max_length", type=int, default=1024)
     parser.add_argument(

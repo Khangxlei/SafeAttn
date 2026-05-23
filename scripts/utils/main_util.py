@@ -4,7 +4,8 @@ import torch
 import numpy as np
 
 from data_util import extract_turns
-from conv_util import build_chat_input
+from conv_util import build_chat_input, generate_stream
+from indices_util import get_safety_token_indices, get_last_user_turn_indices
 
 def register_attention_amplification_hooks(
     model,
@@ -108,7 +109,7 @@ def compute_concept_scores_for_turn(
     config = model.config
     n_heads = config.num_attention_heads
     n_kv_heads = config.num_key_value_heads
-    d_k = getattr(model.config, head_dim", model.config.hidden_size // model.config.num_attention_heads)
+    d_k = getattr(model.config, "head_dim", model.config.hidden_size // model.config.num_attention_heads)
     seq_len = q.shape[0]
 
     q = q.view(seq_len, n_heads,    d_k).transpose(0, 1)

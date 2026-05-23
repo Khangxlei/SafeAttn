@@ -9,6 +9,9 @@ import argparse
 import math
 import random
 
+from utils.benchmark_helpers import compute_concept_scores_for_turn
+
+
 from utils.main_util import compute_concept_scores_for_turn, register_attention_amplification_hooks, run_defense_on_conversation
 from utils.conv_util import build_chat_input
 from utils.indices_util import get_safety_token_indices, get_last_user_turn_indices
@@ -34,7 +37,7 @@ def main():
     )
     parser.add_argument(
         "--harm_vector_path", type=str,
-        default="vectors/harm_direction_qwen.pt",
+        default="../vectors/harm_direction_qwen.pt",
     )
     parser.add_argument(
         "--amplification_factor", type=float, default=20,
