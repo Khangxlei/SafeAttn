@@ -92,7 +92,6 @@ def find_safety_indices(tokenizer, sample_token_ids: list[int]) -> list[int]:
         s = tokenizer.decode([int(tid)], skip_special_tokens=False)
         per_token_strs.append(s)
 
-    # build full decoded string + char→token mapping
     full_decoded = ""
     char_to_token: list[int] = [] 
     for tok_idx, tok_str in enumerate(per_token_strs):
