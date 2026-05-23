@@ -79,7 +79,7 @@ are the links to the datasets we obtained:
 - ORBench-Hard: https://huggingface.co/datasets/bench-llm/or-bench/viewer/or-bench-hard-1k
 
 ## License
-This repository is intended strictly for research purposes and should not be used for any unethical or harmful activities.
+This repository is intended strictly for research purposes only and should not be used for any unethical or harmful activities.
 
 
 
