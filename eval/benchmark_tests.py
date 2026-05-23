@@ -9,13 +9,20 @@ import argparse
 import math
 import random
 
-from utils.benchmark_helpers import compute_concept_scores_for_turn
+from utils.benchmark_helpers import (
+    compute_concept_scores_for_turn,
+    register_attention_amplification_hooks,
+    run_defense_on_conversation,
+    build_chat_input,
+    get_safety_token_indices,
+    get_last_user_turn_indices,
+    extract_numerical_answer,
+    extract_mc_answer,
+    evaluate_gsm8k, evaluate_hellaswag,
+    evaluate_mmlu, evaluate_gpqa
+)
 
 
-from utils.main_util import compute_concept_scores_for_turn, register_attention_amplification_hooks, run_defense_on_conversation
-from utils.conv_util import build_chat_input
-from utils.indices_util import get_safety_token_indices, get_last_user_turn_indices
-from utils.benchmark_util import extract_numerical_answer, extract_mc_answer, evaluate_gsm8k, evaluate_mmlu, evaluate_gpqa, evaluate_hellaswag
 
 
 def main():
