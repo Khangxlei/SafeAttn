@@ -1,5 +1,4 @@
-# SafeAttn
-This is the official repository for SafeAttn. 
+# Dynamic Attention Modulation for LLM Safety 
 
 ## Quick Start
 
